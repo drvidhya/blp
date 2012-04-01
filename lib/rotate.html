@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>
+<meta http-equiv="Content-Language" content="ru"/>
+<meta name="copyright" content="��������.���, 2009" />
+<meta name="Publisher-Email" content="pisem@vremenno.net" />
+<meta name="Publisher-URL" content="http://vremenno.net/" />    
+
+<title>�������� �������� � jQuery UI</title>
+
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.core.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.resizable.css" />
+
+<style>
+#draggable-zone {
+	background: #000 url(images/space.jpg) 0 0 no-repeat;
+	border:     3px solid #000;
+
+	height:     500px;
+	margin:     2em auto;
+	overflow:   hidden;
+	width:      600px;}
+	
+.ui-wrapper {
+	overflow:   visible !important;}
+	
+.ui-resizable-handle {
+	background:    #f5dc58;
+	border:        1px solid #FFF;
+	
+	z-index:    2;}
+	
+.ui-rotatable-handle {
+	background:    #f5dc58;
+	border:        1px solid #FFF;
+	border-radius: 5px;
+		-moz-border-radius:    5px;
+		-o-border-radius:      5px;
+		-webkit-border-radius: 5px;
+	cursor:        pointer;
+	
+	height:        10px;
+	left:          50%;
+	margin:        0 0 0 -5px;
+	position:      absolute;
+	top:           -5px;
+	width:         10px;}
+	
+.ui-rotatable-handle.clone {
+	visibility:  hidden;}
+</style>
+
+</head>
+<body>
+	
+	<div id="draggable-zone">
+		<div id="draggable-wrapper" style="width: 150px; height: 150px; left: 225px; top: 175px;">
+			<div id="resizable-wrapper">				
+				<img src="images/earth.png" width="150" height="150"/>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/ui/jquery.ui.core.js"></script>
+	<script type="text/javascript" src="js/ui/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="js/ui/jquery.ui.mouse.js"></script>
+	<script type="text/javascript" src="js/ui/jquery.ui.draggable.js"></script>
+	<script type="text/javascript" src="js/ui/jquery.ui.resizable.js"></script>
+	<script type="text/javascript" src="js/ui/jquery.ui.rotatable.js"></script>
+	
+	<script type="text/javascript">
+	$(document).ready(function() {
+		var drWr = $('#draggable-wrapper'),
+		    rsWr = $('#resizable-wrapper'),
+		    elem = $('#elem-wrapper');
+		
+		elem.resizable({
+			aspectRatio: true,
+			handles:     'ne, nw, se, sw'
+		});
+		
+		drWr.draggable();
+		
+		elem.parent().rotatable();
+	});
+	</script>
+
+</body>
+</html>

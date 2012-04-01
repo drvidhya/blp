@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>Bucco Lingual Positioner</title>
+        <link rel="stylesheet" type="text/css" href="lib/css/jquery.ui.core.css" />
+        <link rel="stylesheet" type="text/css" href="lib/css/jquery.ui.resizable.css" />
+        <link rel="stylesheet" href="index.css"/>
+        <link rel="stylesheet" href="button.css"/>
+    </head>
+    <body>
+    <h1 id = "header">Bucco Lingual Positioner</h1>
+    <div id = "nav">
+        <img src = "https://3dclickguide.com/images/3D-Click-Guide.png"/>
+        <ol id = "steps">
+            <li class = "selected" id = "upload">
+                <span>1. Upload</span>
+            </li>
+            <li id = "calibrate">
+                <span>2. Calibrate</span>
+                <button class = "done">
+                    Done
+                </button>
+                <button class = "cancel">
+                    Go Back
+                </button>
+            </li>
+            <li id = "position">
+                <span>3. Position</span>
+                <button class = "done">
+                    Done
+                </button>
+                <button class = "cancel">
+                    Go Back
+                </button>
+            </li>
+            <li id = "save">
+                <span>4. Save/Send</span>
+            </li>
+        </ol>
+    </div>
+    <div class = "help-panel">
+        <div id = "help-upload" class = "help-section">
+            <h3>Upload</h3>
+            <ul>
+                <li>
+                    Upload the image of the cast in which you wish to place the BLP. 
+                </li>
+                <li>
+                    Make sure to photograph the cast in a plane perpendicular to the camera with the index BLP placed close to the cut surface of the cast. 
+                </li>
+                <li>
+                    Do not worry about the dimensions of the photograph. You will be able to calibrate the BLP to match the size of the cast in the next step.
+                </li>
+            </ul>
+        </div>
+        <div id = "help-calibrate" class = "help-section">
+            <h3>Calibrate</h3>
+            <p>
+                <ul>
+                    <li>
+                        In order to calibrate your image to the BLP accurately, place the BLP on the screen over the BLP in your picture.
+                    </li>
+                    <li>
+                        Resize by clicking and dragging the squares around the picture.
+                    </li>
+                    <li>
+                        Rotate by clicking and dragging on the circle next to the image.
+                    </li>
+                    <li>
+                        Adjust the image such that the margins of both the BLPs coincide. 
+                    </li>
+                    <li>
+                        Now the BLP is proportionate to the resolution of your cast picture. Proceed to the next step to place the BLP.
+                    </li>
+                </ul>
+            </p>
+        </div>
+        <div id = "help-position" class = "help-section">
+            <h3>Position</h3>
+            <div>
+                <ul>
+                    <li>
+                        Rotate and move the BLP to place it anywhere you wish on the surface of the cast by clicking and dragging the BLP image. 
+                    </li>
+                    <li>
+                        When you are done, proceed to the next step to save the image.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id = "help-save" class = "help-section">
+            <h3>Save</h3>
+            <p>
+                Right click on the image that has opened in the new window/tab to save it in a format that will allow you to print and email the image.
+            </p>
+        </div>
+    </div>
+    <div id = "uploader" class = "modal">
+        <div id = "imageBox">
+            Click here to upload the image of the cast
+        </div>
+        <div class = "help">
+            To start, upload the image of the cast or <a href = "#" id = "sampleImage">select a sample image</a>. 
+        </div>
+        <input type = "file" id = "imgUpload"/>
+    </div>
+    <div id = "saver">
+        <img id = "saveImage"/>
+    </div>
+    <div id = "positioner">
+        <img id = "cast"/>
+        <div id="draggable-wrapper" style="width: 100px; height: 227x; left: 15px; top: 100px; position : absolute; ">
+            <div id="resizable-wrapper" style="width: 100px; height: 227x; left: 225px; top: 175px;">
+                <img src="images/blp.png" width="100" height="227" id="elem-wrapper" />
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="lib/js/jquery.js">
+    </script>
+    </script>
+    <script type="text/javascript" src="lib/js/ui/jquery.ui.core.js">
+    </script>
+    <script type="text/javascript" src="lib/js/ui/jquery.ui.widget.js">
+    </script>
+    <script type="text/javascript" src="lib/js/ui/jquery.ui.mouse.js">
+    </script>
+    <script type="text/javascript" src="lib/js/ui/jquery.ui.draggable.js">
+    </script>
+    <script type="text/javascript" src="lib/js/ui/jquery.ui.resizable.js">
+    </script>
+    <script type="text/javascript" src="lib/js/ui/jquery.ui.rotatable.js">
+    </script>
+    <script type="text/javascript" src = "index.js">
+    </script>
+</body>
+</html>

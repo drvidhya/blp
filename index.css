@@ -1,0 +1,192 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Century Gothic", Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+a, a:visited {
+    color: #4183C4;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a img {
+    border: none;
+}
+
+#header {
+    text-align: center;
+    color: #5FCAC1;
+    padding: 0;
+    font-size: 2em;
+    margin-top: 1%;
+}
+
+#nav {
+    position: absolute;
+    height: 90%;
+    margin: 1% 0 0 0;
+    padding: 0;
+    top: 0;
+    width: 17%;
+}
+
+#nav img {
+    margin: 5% 0 2% 28%;
+}
+
+#steps {
+    margin: 0;
+    padding: 0;
+}
+
+#steps li {
+    padding: 10% 10%;
+    margin: 10% 0 0 5%;
+    list-style: none;
+    background-color: #7F7F7F;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: left;
+    text-transform: lowercase;
+}
+
+#steps li.selected {
+    background-color: #BBB;
+}
+
+.modal {
+    width: 40%;
+    margin: 5% auto 0 auto;
+    background-color: #FFF;
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 3%;
+}
+
+#imageBox {
+    margin: 2em;
+    padding: 5em 2em;
+    position: relative;
+    border: #ABCDEF 5px SOLID;
+    font-size: 1.1em;
+}
+
+#imagebox:hover {
+    background-color: #BCDEFF;
+    cursor: pointer;
+}
+
+#imgUpload {
+    opacity: 0;
+}
+
+.modal .help {
+    padding: 1em 2em;
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+
+#positioner {
+    display: none;
+    width: 100%;
+    height: 89%;
+    overflow: hidden;
+    text-align: center;
+}
+
+#positioner.doposition #elem-wrapper {
+    box-shadow: 0 0 2px #ccc;
+}
+
+#steps li button {
+    display: none;
+}
+
+#steps li.selected span {
+    margin-bottom: 10px;
+    display: block;
+}
+
+#steps li.selected button {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    text-transform: none;
+}
+
+.ui-wrapper {
+    overflow: visible !important;
+}
+
+.ui-resizable-handle {
+    background: #f5dc58;
+    border: 1px solid #FFF;
+    z-index: 2;
+    opacity: 0.5;
+}
+
+.ui-rotatable-handle {
+    background: #f5dc58;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.5;
+    height: 10px;
+    left: 50%;
+    margin: 0 0 0 -5px;
+    position: absolute;
+    top: -25px;
+    width: 10px;
+}
+
+.ui-rotatable-handle.clone {
+    visibility: hidden;
+    opacity: 0.5;
+}
+
+.help-panel {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 95%;
+    width: 15%;
+    padding: 1%;
+    border-left: SOLID 1px #ccc;
+    box-shadow: 0 10px 10px #CCC;
+}
+
+.help-panel h3 {
+    font-style: normal;
+    text-align: center;
+}
+
+.help-panel .help-section {
+    display: none;
+    font-style: italic;
+}
+
+.help-panel ul{
+	margin-left : 1px;
+	padding-left : 10px;
+}
+
+.help-panel li{
+	margin-top : 10px;
+}
+
+#saver {
+    display: none;
+	text-align : center;
+}
