@@ -11,6 +11,25 @@
 	elem.parent().rotatable();
 	drWr.css("top", 200).css("left", 900);
 	
+	$("body").bind("keydown", function(e){
+		var pos = drWr.position();
+		var mod = e.shiftKey ? 10 : 1;
+		switch (e.keyCode) {
+			case 38:
+				drWr.css("top", pos.top - 1 * mod);
+				break;
+			case 40:
+				drWr.css("top", pos.top + 1 * mod);
+				break;
+			case 39:
+				drWr.css("left", pos.left + 1 * mod);
+				break;
+			case 37:
+				drWr.css("left", pos.left - 1 * mod);
+				break;
+		}
+	});
+	
 	// Functions needed for Step 1
 	$("#imageBox").click(function(){
 		document.getElementById("imgUpload").click();
@@ -103,7 +122,7 @@
 		ctx.transform(a[0], a[1], a[2], a[3], 0, 0);
 		ctx.drawImage($("#elem-wrapper")[0], -$("#elem-wrapper").width() / 2, -$("#elem-wrapper").height() / 2, $("#elem-wrapper").width(), $("#elem-wrapper").height());
 		ctx.restore();
-		$("#saveImage").attr("src", c[0].toDataURL("image/png"))//.replace("image/png", "image/octet-stream");
+		$("#saveImage").attr("src", c[0].toDataURL("image/jpeg"))//.replace("image/png", "image/octet-stream");
 		c.remove();
 	};
 	
