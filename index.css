@@ -177,16 +177,19 @@ a img {
     font-style: italic;
 }
 
-.help-panel ul{
-	margin-left : 1px;
-	padding-left : 10px;
+.help-panel ul {
+    margin-left: 1px;
+    padding-left: 10px;
 }
 
-.help-panel li{
-	margin-top : 10px;
+.help-panel li {
+    margin-top: 10px;
 }
 
 #saver {
     display: none;
-	text-align : center;
+    text-align: center;
+    /*position: absolute;
+    left: 298px;
+    opacity: 0.5;*/
 }
