@@ -122,6 +122,13 @@
     </div>
     <script type="text/javascript" src="lib/js/jquery.js">
     </script>
+	    <script type = "text/javascript">
+        if ($.browser.msie) {
+        	alert("This software requires a plugin to work in Internet Explorer. Please download Google Chrome Frame and start the software again");
+			window.open("http://www.google.com/chromeframe?prefersystemlevel=true");
+        }
+    </script>
+
     </script>
     <script type="text/javascript" src="lib/js/ui/jquery.ui.core.js">
     </script>
