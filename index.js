@@ -113,7 +113,7 @@
 		var transform = $("#elem-wrapper").parent().css("-webkit-transform") || $("#elem-wrapper").parent().css("-moz-transform");
 		var a = transform.substring("matrix(".length, transform.length - 1).split(",");
 		var castPosition = $("#cast").offset();
-		var elemPosition = $("#elem-wrapper").offset();
+		var elemPosition = $("#draggable-wrapper").offset();
 		var c = $("<canvas>").attr("width", $("#cast").width()).attr("height", $("#cast").height()).css("display", "none").appendTo("body");
 		var ctx = c[0].getContext("2d");
 		ctx.drawImage($("#cast")[0], 0, 0, c.width(), c.height());
